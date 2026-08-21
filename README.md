@@ -42,18 +42,11 @@ The proposed framework, named **FS-LCMF**, integrates few-shot large-model reaso
 
 ## Overview
 
+The proposed framework, named **FS-LCMF**, integrates few-shot large-model reasoning-chain distillation, reasoning-generated-label-guided multimodal fusion, and dynamic knowledge graph explanation for cross-condition fault diagnosis of industrial robots.
+
 Industrial robots operate under variable speeds and loads, which may lead to significant distribution shifts in vibration signals, time-frequency patterns, and fault semantics. In practical applications, target-condition labels are usually unavailable, while directly invoking online large models for large-scale sample-by-sample inference is computationally expensive.
 
 To address these issues, this work proposes a few-shot reasoning-chain-guided multimodal diagnosis framework. First, a small number of labeled source-condition samples are used to query an online teacher large model and construct diagnostic reasoning-chain supervision data. Then, the teacher-generated reasoning chains are distilled into a local Qwen-LoRA model, which generates reasoning-generated labels for large-scale unseen target-condition samples. Finally, vibration signals, CWT time-frequency images, and fault semantic embeddings are fused for cross-condition diagnosis, while a dynamic knowledge graph provides traceable diagnostic evidence.
-
-## Main Features
-
-- Few-shot diagnostic reasoning-chain construction using an online teacher large model.
-- Qwen-LoRA-based reasoning-chain distillation for local target-condition inference.
-- Multimodal fusion of vibration signals, CWT time-frequency images, and fault semantic embeddings.
-- Reasoning-generated-label-guided semantic loading without using target-domain ground-truth labels.
-- Dynamic knowledge graph explanation for traceable diagnostic evidence.
-- Cross-condition diagnosis validation under different operating speeds.
 
 ## Repository Contents
 
