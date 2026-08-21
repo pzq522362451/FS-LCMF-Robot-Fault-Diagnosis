@@ -21,5 +21,24 @@ Data/           Partial publicly available sample data. Only normal-condition sa
 Results/        Experimental result, including framework, confusion matrices, t-SNE visualization, and knowledge graph visualization.
 src/            Source code for preprocessing, reasoning-chain distillation, multimodal fusion, and dynamic knowledge graph construction.
 
+For CUDA 12.1 PyTorch installation, it is recommended to install PyTorch separately:
+pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt
+
+## Implementation details
+The complete FS-LCMF workflow contains the following stages:
+1. Multimodal input preparation
+   Raw vibration signals are segmented into fixed-length windows. Each window is transformed into a CWT time-frequency image, and RMS and Kurtosis are calculated as statistical indicators.
+2. Few-shot reasoning-chain construction
+   A small number of labeled source-condition samples are sent to an online teacher large model together with CWT images, statistical indicators, and candidate fault classes to generate diagnostic reasoning chains.
+3. Qwen-LoRA reasoning-chain distillation
+   The teacher-generated reasoning chains and class conclusions are used to fine-tune a local Qwen-LoRA model. The backbone parameters are frozen, and only LoRA adapter parameters are updated.
+4. Reasoning-generated label inference
+   The fine-tuned Qwen-LoRA model is used to infer reasoning chains and reasoning-generated labels for large-scale target-condition samples without using target-domain true labels.
+5. Multimodal fusion diagnosis
+   Vibration features, CWT image features, and fault semantic embeddings are fused by a cross-modal attention network for fault classification.
+6. Dynamic knowledge graph explanation
+   Source samples, target samples, fault classes, and semantic knowledge nodes are connected through feature similarity and reasoning-generated labels to provide traceable diagnostic evidence.
+
 
     
