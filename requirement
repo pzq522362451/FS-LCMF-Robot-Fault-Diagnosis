@@ -1,0 +1,38 @@
+# Core numerical and scientific computing
+numpy==1.26.4
+scipy==1.15.3
+pandas==2.3.3
+scikit-learn==1.7.2
+
+# Deep learning
+# For CUDA 12.1 builds, install with:
+# pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+torchaudio==2.5.1+cu121
+
+# Large-model reasoning and LoRA fine-tuning
+transformers==5.10.2
+accelerate==1.13.0
+safetensors==0.8.0
+tokenizers==0.22.2
+tiktoken==0.12.0
+huggingface_hub==1.18.0
+
+# Signal processing and time-frequency image generation
+PyWavelets==1.8.0
+librosa==0.11.0
+soundfile==0.13.1
+
+# Image processing
+pillow==12.2.0
+
+# Visualization and graph analysis
+matplotlib==3.10.9
+seaborn==0.13.2
+networkx==3.4.2
+
+# Utilities
+tqdm==4.67.3
+requests==2.33.1
+PyYAML==6.0.3
