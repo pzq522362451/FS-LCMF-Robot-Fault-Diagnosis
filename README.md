@@ -50,7 +50,7 @@ The confusion matrix shows the classification performance of FS-LCMF under the u
 
 The Boxplots shows the classification performance of FS-LCMF compare with other scenarios.
 
-![Boxplots](figures/Boxplots.png)
+![Boxplots](figures/Boxplots.emf)
 
 ### Feature visualization
 
