@@ -17,7 +17,7 @@ To address these issues, this work proposes a few-shot reasoning-chain-guided mu
 
 ```text
 
-Data/    Partial publicly available sample data. Only normal-condition samples are provided for demonstration.
+Data/           Partial publicly available sample data. Only normal-condition samples are provided for demonstration.
 Results/        Experimental result, including framework, confusion matrices, t-SNE visualization, and knowledge graph visualization.
 src/            Source code for preprocessing, reasoning-chain distillation, multimodal fusion, and dynamic knowledge graph construction.
 
