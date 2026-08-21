@@ -4,7 +4,7 @@ Explainable cross-condition fault diagnosis for industrial robots using reasonin
 
 ## Repository Structure
 
-```text
+
 FS-LCMF-Robot-Fault-Diagnosis/
 ├── README.md
 ├── LICENSE
