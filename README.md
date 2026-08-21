@@ -37,7 +37,7 @@ This work is conducted for industrial robot fault diagnosis and predictive maint
 
 The flowchart of FS-LCMF.
 
-![Flowchart](figures/Flowchart.bmp)
+![Flowchart](figures/Flowchart.png)
 
 ## Results
 ### Confusion matrix
@@ -50,17 +50,17 @@ The confusion matrix shows the classification performance of FS-LCMF under the u
 
 The Boxplots shows the classification performance of FS-LCMF compare with other scenarios.
 
-![Boxplots](figures/Boxplots.emf)
+![Boxplots](figures/Boxplots.png)
 
 ### Feature visualization
 
 The t-SNE visualization illustrates the separability of multimodal fusion features under cross-condition diagnosis. Compared with single-modal vibration features, the fused representation shows more compact intra-class distributions and clearer inter-class boundaries.
 
-![t-SNE visualization](figures/tsne.emf)
+![t-SNE visualization](figures/tsne.png)
 
 Updated dynamic knowledge graph:
 
-![Updated dynamic knowledge graph](figures/kg.emf
+![Updated dynamic knowledge graph](figures/kg.png)
 
 ## Repository Contents
 
