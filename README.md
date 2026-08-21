@@ -1,32 +1,31 @@
 # FS-LCMF-Robot-Fault-Diagnosis
+
 Explainable cross-condition fault diagnosis for industrial robots using reasoning-chain-guided multimodal fusion.
+
+## Repository Structure
+
+```text
 FS-LCMF-Robot-Fault-Diagnosis/
-│
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
-│
 ├── paper/
 │   └── manuscript.pdf
-│
 ├── figures/
 │   ├── framework.png
 │   ├── confusion_matrix.png
 │   ├── tsne_visualization.png
 │   ├── dynamic_kg_initial.png
 │   └── dynamic_kg_updated.png
-│
 ├── sample_data/
 │   └── normal_condition/
 │       ├── C0S1L2_sample.npy
 │       ├── C0S2L2_sample.npy
 │       └── C0S3L2_sample.npy
-│
 ├── results/
 │   ├── cross_condition_results.csv
 │   ├── ablation_results.csv
 │   └── qwen_reasoning_results.csv
-│
 └── src/
     ├── data_preprocessing/
     ├── multimodal_fusion/
